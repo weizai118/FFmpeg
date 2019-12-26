@@ -50,11 +50,15 @@ struct decklink_cctx {
     DecklinkPtsSource video_pts_source;
     int audio_input;
     int video_input;
+    int tc_format;
     int draw_bars;
     char *format_code;
     int raw_format;
     int64_t queue_size;
     int copyts;
+    int64_t timestamp_align;
+    int timing_offset;
+    int wait_for_tc;
 };
 
 #endif /* AVDEVICE_DECKLINK_COMMON_C_H */
